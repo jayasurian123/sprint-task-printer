@@ -1,0 +1,207 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'phantomjs' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.24
+4 verbose cache add [ 'phantomjs', null ]
+5 verbose cache add name=undefined spec="phantomjs" args=["phantomjs",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'phantomjs',
+6 verbose parsed url   path: 'phantomjs',
+6 verbose parsed url   href: 'phantomjs' }
+7 silly lockFile 30d7cd7d-phantomjs phantomjs
+8 verbose lock phantomjs /Users/surian/.npm/30d7cd7d-phantomjs.lock
+9 silly lockFile 30d7cd7d-phantomjs phantomjs
+10 silly lockFile 30d7cd7d-phantomjs phantomjs
+11 verbose addNamed [ 'phantomjs', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 29cf7fd6-phantomjs phantomjs@
+14 verbose lock phantomjs@ /Users/surian/.npm/29cf7fd6-phantomjs.lock
+15 silly addNameRange { name: 'phantomjs', range: '*', hasData: false }
+16 verbose request where is /phantomjs
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id acb69f09878ad6a8
+19 verbose url raw /phantomjs
+20 verbose url resolving [ 'https://registry.npmjs.org/', './phantomjs' ]
+21 verbose url resolved https://registry.npmjs.org/phantomjs
+22 verbose request where is https://registry.npmjs.org/phantomjs
+23 info trying registry request attempt 1 at 12:11:04
+24 verbose etag "AK2GFXGW7P4U3EPVXNUUSE0JA"
+25 http GET https://registry.npmjs.org/phantomjs
+26 http 304 https://registry.npmjs.org/phantomjs
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Sat, 20 Sep 2014 10:11:05 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Sat, 20 Sep 2014 10:11:05 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"AK2GFXGW7P4U3EPVXNUUSE0JA"',
+27 silly registry.get     'x-served-by': 'cache-fra1221-FRA',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1411207865.017876,VS0,VE0',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag https://registry.npmjs.org/phantomjs from cache
+29 silly addNameRange number 2 { name: 'phantomjs', range: '*', hasData: true }
+30 silly addNameRange versions [ 'phantomjs',
+30 silly addNameRange   [ '0.0.1',
+30 silly addNameRange     '0.0.2',
+30 silly addNameRange     '0.0.3',
+30 silly addNameRange     '0.0.4',
+30 silly addNameRange     '0.0.5',
+30 silly addNameRange     '0.0.6',
+30 silly addNameRange     '0.0.7',
+30 silly addNameRange     '0.0.8',
+30 silly addNameRange     '0.0.9',
+30 silly addNameRange     '0.1.0',
+30 silly addNameRange     '0.1.1',
+30 silly addNameRange     '0.2.0',
+30 silly addNameRange     '0.2.1',
+30 silly addNameRange     '0.2.2',
+30 silly addNameRange     '0.2.3',
+30 silly addNameRange     '0.2.4',
+30 silly addNameRange     '0.2.5',
+30 silly addNameRange     '0.2.6',
+30 silly addNameRange     '1.8.0-1',
+30 silly addNameRange     '1.8.1-1',
+30 silly addNameRange     '1.8.1-2',
+30 silly addNameRange     '1.8.1-3',
+30 silly addNameRange     '1.8.2-0',
+30 silly addNameRange     '1.8.2-1',
+30 silly addNameRange     '1.8.2-2',
+30 silly addNameRange     '1.9.0-0',
+30 silly addNameRange     '1.9.0-1',
+30 silly addNameRange     '1.9.0-2',
+30 silly addNameRange     '1.9.0-3',
+30 silly addNameRange     '1.9.0-4',
+30 silly addNameRange     '1.9.0-5',
+30 silly addNameRange     '1.9.0-6',
+30 silly addNameRange     '1.9.1-0',
+30 silly addNameRange     '1.9.1-2',
+30 silly addNameRange     '1.9.1-3',
+30 silly addNameRange     '1.9.1-4',
+30 silly addNameRange     '1.9.1-5',
+30 silly addNameRange     '1.9.1-6',
+30 silly addNameRange     '1.9.1-7',
+30 silly addNameRange     '1.9.1-8',
+30 silly addNameRange     '1.9.1-9',
+30 silly addNameRange     '1.9.2-0',
+30 silly addNameRange     '1.9.2-1',
+30 silly addNameRange     '1.9.2-2',
+30 silly addNameRange     '1.9.2-3',
+30 silly addNameRange     '1.9.2-4',
+30 silly addNameRange     '1.9.2-5',
+30 silly addNameRange     '1.9.2-6',
+30 silly addNameRange     '1.9.6-0',
+30 silly addNameRange     '1.9.7-1',
+30 silly addNameRange     '1.9.7-3',
+30 silly addNameRange     '1.9.7-4',
+30 silly addNameRange     '1.9.7-5',
+30 silly addNameRange     '1.9.7-6',
+30 silly addNameRange     '1.9.7-7',
+30 silly addNameRange     '1.9.7-8',
+30 silly addNameRange     '1.9.7-9',
+30 silly addNameRange     '1.9.7-10',
+30 silly addNameRange     '1.9.7-11',
+30 silly addNameRange     '1.9.7-12',
+30 silly addNameRange     '1.9.7-13',
+30 silly addNameRange     '1.9.7-14',
+30 silly addNameRange     '1.9.7-15',
+30 silly addNameRange     '1.8.2-3',
+30 silly addNameRange     '1.9.8',
+30 silly addNameRange     '1.9.9' ] ]
+31 verbose addNamed [ 'phantomjs', '1.9.9' ]
+32 verbose addNamed [ '1.9.9', '1.9.9' ]
+33 silly lockFile 9973ddc0-phantomjs-1-9-9 phantomjs@1.9.9
+34 verbose lock phantomjs@1.9.9 /Users/surian/.npm/9973ddc0-phantomjs-1-9-9.lock
+35 silly lockFile 9973ddc0-phantomjs-1-9-9 phantomjs@1.9.9
+36 silly lockFile 9973ddc0-phantomjs-1-9-9 phantomjs@1.9.9
+37 silly lockFile 29cf7fd6-phantomjs phantomjs@
+38 silly lockFile 29cf7fd6-phantomjs phantomjs@
+39 silly resolved [ { name: 'phantomjs',
+39 silly resolved     version: '1.9.9',
+39 silly resolved     keywords: [ 'phantomjs', 'headless', 'webkit' ],
+39 silly resolved     description: 'Headless WebKit with JS API',
+39 silly resolved     homepage: 'https://github.com/Obvious/phantomjs',
+39 silly resolved     repository: { type: 'git', url: 'git://github.com/Obvious/phantomjs.git' },
+39 silly resolved     licenses: [ [Object] ],
+39 silly resolved     author:
+39 silly resolved      { name: 'Dan Pupius',
+39 silly resolved        email: 'dan@obvious.com',
+39 silly resolved        url: 'http://pupius.co.uk' },
+39 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+39 silly resolved     main: 'lib/phantomjs',
+39 silly resolved     bin: { phantomjs: './bin/phantomjs' },
+39 silly resolved     scripts:
+39 silly resolved      { install: 'node install.js',
+39 silly resolved        test: 'nodeunit --reporter=minimal test/tests.js' },
+39 silly resolved     dependencies:
+39 silly resolved      { 'adm-zip': '0.4.4',
+39 silly resolved        kew: '0.4.0',
+39 silly resolved        ncp: '0.6.0',
+39 silly resolved        npmconf: '2.0.9',
+39 silly resolved        mkdirp: '0.5.0',
+39 silly resolved        progress: '1.1.8',
+39 silly resolved        request: '2.42.0',
+39 silly resolved        'request-progress': '0.3.1',
+39 silly resolved        rimraf: '~2.2.2',
+39 silly resolved        which: '~1.0.5' },
+39 silly resolved     devDependencies: { nodeunit: '0.9.0' },
+39 silly resolved     gitHead: '9132de888b448e7ed49656efb1e63d2b56e29d24',
+39 silly resolved     bugs: { url: 'https://github.com/Obvious/phantomjs/issues' },
+39 silly resolved     _id: 'phantomjs@1.9.9',
+39 silly resolved     _shasum: 'fc10dbe8e33c2e0c5bcedfff80a2e9b63d957445',
+39 silly resolved     _from: 'phantomjs@',
+39 silly resolved     _npmVersion: '1.5.0-alpha-4',
+39 silly resolved     _npmUser: { name: 'dpup', email: 'dan@pupi.us' },
+39 silly resolved     dist:
+39 silly resolved      { shasum: 'fc10dbe8e33c2e0c5bcedfff80a2e9b63d957445',
+39 silly resolved        tarball: 'http://registry.npmjs.org/phantomjs/-/phantomjs-1.9.9.tgz' },
+39 silly resolved     directories: {},
+39 silly resolved     _resolved: 'https://registry.npmjs.org/phantomjs/-/phantomjs-1.9.9.tgz',
+39 silly resolved     readme: 'ERROR: No README data found!' } ]
+40 info install phantomjs@1.9.9 into /usr/local/lib
+41 info installOne phantomjs@1.9.9
+42 verbose lib/node_modules/phantomjs unbuild
+43 info preuninstall phantomjs@1.9.9
+44 info uninstall phantomjs@1.9.9
+45 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild phantomjs@1.9.9
+46 verbose /usr/local/bin,[object Object] binRoot
+47 info postuninstall phantomjs@1.9.9
+48 verbose lib/node_modules/phantomjs unbuild
+49 info preuninstall phantomjs@1.9.9
+50 info uninstall phantomjs@1.9.9
+51 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild phantomjs@1.9.9
+52 verbose /usr/local/bin,[object Object] binRoot
+53 info postuninstall phantomjs@1.9.9
+54 error error rolling back Error: EACCES, unlink '/usr/local/lib/node_modules/phantomjs'
+54 error error rolling back  phantomjs@1.9.9 { [Error: EACCES, unlink '/usr/local/lib/node_modules/phantomjs']
+54 error error rolling back   errno: 3,
+54 error error rolling back   code: 'EACCES',
+54 error error rolling back   path: '/usr/local/lib/node_modules/phantomjs' }
+55 error Error: EACCES, unlink '/usr/local/lib/node_modules/phantomjs'
+55 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/phantomjs']
+55 error   errno: 3,
+55 error   code: 'EACCES',
+55 error   path: '/usr/local/lib/node_modules/phantomjs' }
+56 error Please try running this command again as root/Administrator.
+57 error System Darwin 13.4.0
+58 error command "node" "/usr/local/bin/npm" "install" "-g" "phantomjs"
+59 error cwd /Users/surian/Sites/Exp/sprint-task-printer/pages/tests
+60 error node -v v0.10.24
+61 error npm -v 1.4.21
+62 error path /usr/local/lib/node_modules/phantomjs
+63 error code EACCES
+64 error errno 3
+65 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/phantomjs'
+66 verbose exit [ 3, true ]

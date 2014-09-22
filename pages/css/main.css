@@ -1,0 +1,113 @@
+html * {
+  font-family: Palatino, Georgia, Times, serif;
+}
+#printMe * {
+  font-size: 1em;
+}
+#container {
+  overflow: auto;
+}
+.task-container {
+  position: relative;
+  height: 250px;
+  width: 465px;
+  border: 2px solid #b3b3b3;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.close {
+  position: absolute;
+  display: none;
+}
+.close:hover {
+  cursor: pointer;
+}
+.task-container:hover .close {
+  display: inline;
+}
+.category {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-top: 2px solid #b3b3b3;
+  border-left: 2px solid #b3b3b3;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+h4 {
+  margin: 10px 20px;
+  padding-bottom: 5px;
+  font-size: 1.4em;
+  font-weight: normal;
+  border-bottom: 2px dotted black;
+  position: relative;
+}
+h5 {
+  margin: 0px;
+  margin-left: 20px;
+}
+.points {
+  min-width: 50px;
+  line-height: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid red;
+  padding: 0 3px;
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+}
+ul {
+  margin-left: 2px;
+}
+li {
+  margin-bottom: 3px;
+}
+#printMe {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  background-color: #b3b3b3;
+  padding: 15px;
+}
+p {
+  padding-left: 10px;
+}
+.inputs {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  background-color: #EAEAEA;
+  background: -moz-linear-gradient(top, #FFF, #EAEAEA);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #FFF), color-stop(1.0, #EAEAEA));
+  border: 1px solid #CACACA;
+  color: #444;
+  font-size: 1.4em;
+  margin: 0 0 2px;
+  padding: 5px 9px;
+  width: 260px;
+}
+
+.inputs:focus {
+  background: #FFF;
+  -webkit-box-shadow: 0 0 25px #CCC;
+  -moz-box-shadow: 0 0 25px #ccc;
+  box-shadow: 0 0 25px #CCC;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
+}
+textarea {
+  width: 300px;
+}
+#addTask, #clearTask {
+  width: 138px;
+}
+#print {
+  width: 280px;
+}

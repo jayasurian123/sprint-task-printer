@@ -2,122 +2,9 @@
 <html>
 <head>
   <title>Print it like a Dev.</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<style type="text/css">
-  html * {
-    font-family: Palatino, Georgia, Times, serif;
-  }
-  #printMe * {
-    font-size: 1em;
-  }
-  #container {
-    overflow: auto;
-  }
-  .task-container {
-    position: relative;
-    height: 250px;
-    width: 465px;
-    border: 2px solid #b3b3b3;
-    float: left;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-  .close {
-    position: absolute;
-    display: none;
-  }
-  .close:hover {
-    cursor: pointer;
-  }
-  .task-container:hover .close {
-    display: inline;
-  }
-  .category {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-top: 2px solid #b3b3b3;
-    border-left: 2px solid #b3b3b3;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  h4 {
-    margin: 10px 20px;
-    padding-bottom: 5px;
-    font-size: 1.4em;
-    font-weight: normal;
-    border-bottom: 2px dotted black;
-    position: relative;
-  }
-  h5 {
-    margin: 0px;
-    margin-left: 20px;
-  }
-  .points {
-    min-width: 50px;
-    line-height: 30px;
-    border-radius: 10px;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid red;
-    padding: 0 3px;
-    position: absolute;
-    right: 0;
-    bottom: 2px;
-  }
-  ul {
-    margin-left: 2px;
-  }
-  li {
-    margin-bottom: 3px;
-  }
-  #printMe {
-    position: fixed;
-    top: 30%;
-    right: 0;
-    background-color: #b3b3b3;
-    padding: 40px;
-  }
-  p {
-    padding-left: 10px;
-  }
-  .inputs {
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    background-color: #EAEAEA;
-    background: -moz-linear-gradient(top, #FFF, #EAEAEA);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #FFF), color-stop(1.0, #EAEAEA));
-    border: 1px solid #CACACA;
-    color: #444;
-    font-size: 1.4em;
-    margin: 0 0 2px;
-    padding: 5px 9px;
-    width: 260px;
-  }
-
-  .inputs:focus {
-    background: #FFF;
-    -webkit-box-shadow: 0 0 25px #CCC;
-    -moz-box-shadow: 0 0 25px #ccc;
-    box-shadow: 0 0 25px #CCC;
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    transform: scale(1.05);
-  }
-    textarea {
-      width: 300px;
-    }
-
-
-</style>
-
-
-
 
 <div id="container"></div>
 
@@ -128,53 +15,14 @@
     <div><input type="text" id="points" class="inputs" placeholder="Points"/></div>
     <div><input type="text" id="category" class="inputs" placeholder="Category"/> </div>
     <div><textarea id="desc" rows="10" columns="100" class="inputs"> </textarea></div>
-    <div><button id="addTask" class="inputs"> Add</button></div>
+    <button id="addTask" class="inputs"> Add</button>
+    <button id="clearTask" class="inputs"> Clear</button>
     <div><button id="print" class="inputs"> Print</button></div>
   </form>
 </div>
 
-
-<script>
-
-document.getElementById('addTask').addEventListener('click', addTask);
-document.getElementById('print').addEventListener('click', printTask);
-document.getElementById('container').addEventListener('click', closeTask);
-
-function closeTask (e) {
-  e.preventDefault();
-  if (e.target.className !== 'close') {
-    return;
-  }
-  var taskContainer = e.target.parentNode;
-  taskContainer.parentNode.removeChild(taskContainer);
-}
-
-function printTask (e) {
-  e.preventDefault();
-  var formNode = document.getElementById('printMe');
-  formNode.parentNode.removeChild(formNode);
-  window.print();
-}
-
-function addTask (e) {
-  var template = '<div class="task-container"><span class="close"> X </span>' +
-    '<h4>{{title}}<span class="points">{{points}}</span></h4>' +
-    '<p>{{desc}}</p>' +
-    '<div class="category">{{category}}</div>' +
-  '</div>';
-
-  e.preventDefault();
-  template = template.replace('{{title}}', document.getElementById('header').value);
-  template = template.replace('{{points}}', document.getElementById('points').value);
-  template = template.replace('{{category}}', document.getElementById('category').value);
-  var desc = document.getElementById('desc').value;
-  desc = desc.replace(/\n/g, '</p><p>');
-  template = template.replace('{{desc}}', desc);
-  document.getElementById('container').insertAdjacentHTML('beforeend', template);
-
-}
-
-
-</script>
+<script src="tests/underscore-min.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
