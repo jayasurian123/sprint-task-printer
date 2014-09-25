@@ -1,3 +1,10 @@
+@media print {
+  /* for printing max 6 stories in a A4 size paper.*/
+  .task-container:nth-child(6) {
+    margin-bottom: 100px;
+  }
+}
+
 html * {
   font-family: Palatino, Georgia, Times, serif;
 }
@@ -39,12 +46,13 @@ html * {
   padding-right: 10px;
 }
 h4 {
-  margin: 10px 20px;
+  margin: 10px 5px;
   padding-bottom: 5px;
   font-size: 1.4em;
   font-weight: normal;
   border-bottom: 2px dotted black;
   position: relative;
+  padding-right: 55px;
 }
 h5 {
   margin: 0px;
