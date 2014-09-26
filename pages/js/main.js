@@ -10,6 +10,31 @@ if (storage.dataStore) {
 document.getElementById('addTask').addEventListener('click', addTask);
 document.getElementById('print').addEventListener('click', printTask);
 document.getElementById('container').addEventListener('click', clickHandler);
+document.getElementById('go').addEventListener('click', searchHandler);
+
+window.onload = function () {
+  var obj = JSON.parse(localStorage.sprintCredentials);
+
+  document.getElementById('search').value = getQueryData('search') || obj.search;
+  document.getElementById('token').value = getQueryData('token') || obj.token;
+  document.getElementById('project-id').value = getQueryData('projectId') || obj.projectId;
+};
+
+function searchHandler (e) {
+  e.preventDefault();
+  var obj = JSON.parse(localStorage.sprintCredentials);
+  obj.search = document.getElementById('search').value || getQueryData('search') || obj.search;
+  obj.token = document.getElementById('token').value || getQueryData('token') || obj.token;
+  obj.projectId = document.getElementById('project-id').value || getQueryData('projectId') || obj.projectId;
+
+  localStorage.sprintCredentials = JSON.stringify(obj);
+  loadFromPivotal(obj);
+}
+
+
+function getQueryData (key) {
+  return unescape(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + escape(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));
+};
 
 function clickHandler (e) {
   e.preventDefault();
@@ -67,6 +92,22 @@ function addTask (e) {
 
   var index = storage.save(obj);
   addTaskCard(obj, index);
+}
+
+function loadFromPivotal (data) {
+  pivotalService.executeTrackerApiFetch(data, function (results) {
+    var index;
+    results.forEach(function (val) {
+      var obj = {};
+      obj.title = val.name;
+      obj.points = val.estimate || '__';
+      obj.category = val.story_type;
+      obj.desc = (val.description) ? val.description.substring(0, 155) : '';
+
+      index = storage.save(obj);
+      addTaskCard(obj, index);
+    });
+  });
 }
 
 function addTaskCard (obj, index) {
