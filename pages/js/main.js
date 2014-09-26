@@ -13,11 +13,14 @@ document.getElementById('container').addEventListener('click', clickHandler);
 document.getElementById('go').addEventListener('click', searchHandler);
 
 window.onload = function () {
+  if (!localStorage.sprintCredentials) {
+    localStorage.sprintCredentials = "{}";
+  }
   var obj = JSON.parse(localStorage.sprintCredentials);
 
-  document.getElementById('search').value = getQueryData('search') || obj.search;
-  document.getElementById('token').value = getQueryData('token') || obj.token;
-  document.getElementById('project-id').value = getQueryData('projectId') || obj.projectId;
+  document.getElementById('search').value = getQueryData('search') || obj.search || '';
+  document.getElementById('token').value = getQueryData('token') || obj.token || '';
+  document.getElementById('project-id').value = getQueryData('projectId') || obj.projectId || '';
 
   resetForm();
 };
@@ -86,6 +89,9 @@ function printTask (e) {
   e.preventDefault();
   var formNode = document.getElementById('printMe');
   formNode.parentNode.removeChild(formNode);
+  var pivotalNode = document.getElementById('pivotal');
+  pivotalNode.parentNode.removeChild(pivotalNode);
+
   window.print();
 }
 

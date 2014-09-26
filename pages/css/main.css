@@ -8,7 +8,7 @@
 html * {
   font-family: Palatino, Georgia, Times, serif;
 }
-#printMe * {
+#printMe *, #pivotal * {
   font-size: 1em;
 }
 #container {
@@ -78,13 +78,19 @@ ul {
 li {
   margin-bottom: 3px;
 }
-#printMe {
+#printMe, #pivotal {
   position: fixed;
-  top: 30%;
   right: 0;
   background-color: #B3B3B3;
   padding: 15px;
 }
+#printMe {
+  bottom: 5%;
+}
+#pivotal {
+ top: 5%; 
+}
+
 p {
   padding-left: 10px;
 }
@@ -117,6 +123,6 @@ textarea {
 #addTask, #clearTask {
   width: 138px;
 }
-#print {
+#print, #go {
   width: 280px;
 }
