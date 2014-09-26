@@ -18,6 +18,8 @@ window.onload = function () {
   document.getElementById('search').value = getQueryData('search') || obj.search;
   document.getElementById('token').value = getQueryData('token') || obj.token;
   document.getElementById('project-id').value = getQueryData('projectId') || obj.projectId;
+
+  resetForm();
 };
 
 function searchHandler (e) {
@@ -64,6 +66,13 @@ function editTask (target) {
     document.getElementById('category').value = obj.category;
     document.getElementById('desc').value = obj.desc;
   }
+}
+
+function resetForm () {
+  document.getElementById('header').value = '';
+  document.getElementById('points').value = '';
+  document.getElementById('category').value = '';
+  document.getElementById('desc').value = '';
 }
 
 function removeTask (target) {
