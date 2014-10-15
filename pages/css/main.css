@@ -1,9 +1,3 @@
-@media print {
-  /* for printing max 6 stories in a A4 size paper.*/
-  .task-container:nth-child(6) {
-    margin-bottom: 100px;
-  }
-}
 
 html * {
   font-family: Palatino, Georgia, Times, serif;
@@ -125,4 +119,18 @@ textarea {
 }
 #print, #go {
   width: 280px;
+}
+
+@media print {
+  .task-container {
+    font-family: Palatino, Georgia, Times, serif;
+    width: 155mm;
+    height: 85mm;
+    border: 2px solid red;
+    /*margin-top: 15mm;*/
+    margin-bottom: 30mm;
+  }
+  #printMe *, #pivotal * {
+    font-size: 1em;
+  }
 }
