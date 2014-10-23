@@ -121,14 +121,21 @@ textarea {
   width: 280px;
 }
 
+@page {
+  size: A4 landscace;
+  margin: 5mm;
+}
+
+/*page-break-after: always;*/
+
 @media print {
   .task-container {
     font-family: Palatino, Georgia, Times, serif;
-    width: 155mm;
-    height: 85mm;
-    border: 2px solid red;
+    width: 140mm;
+    height: 70mm;
+    border: 1mm solid red;
     /*margin-top: 15mm;*/
-    margin-bottom: 30mm;
+    /*margin-bottom: 30mm;*/
   }
   #printMe *, #pivotal * {
     font-size: 1em;
