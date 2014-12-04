@@ -82,7 +82,7 @@ li {
   bottom: 5%;
 }
 #pivotal {
- top: 5%; 
+ top: 5%;
 }
 
 p {
@@ -130,13 +130,15 @@ textarea {
 /*page-break-after: always;*/
 
 @media print {
+  html, body {
+    /*height:297mm;*/
+    width:289mm;
+  }
   .task-container {
     font-family: Palatino, Georgia, Times, serif;
     width: 140mm;
     height: 70mm;
     border: 1mm solid red;
-    /*margin-top: 15mm;*/
-    /*margin-bottom: 30mm;*/
   }
   #printMe *, #pivotal * {
     font-size: 1em;

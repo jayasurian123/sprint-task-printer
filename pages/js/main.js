@@ -46,7 +46,7 @@ function clickHandler (e) {
   var target = e.target || e.srcElement;
 
   while(target != e.currentTarget) {
-    
+
     switch (target.className) {
       case 'close':
         removeTask(target);
@@ -117,7 +117,7 @@ function loadFromPivotal (data) {
       obj.title = val.name;
       obj.points = val.estimate || '__';
       obj.category = val.story_type;
-      obj.desc = (val.description) ? val.description.substring(0, 155) : '';
+      obj.desc = val.description: '';
 
       index = storage.save(obj);
       addTaskCard(obj, index);
@@ -132,7 +132,7 @@ function addTaskCard (obj, index) {
     '<p>{{desc}}</p>' +
     '<div class="category">{{category}}</div>' +
   '</div>';
-  
+
   template = template.replace('{{index}}', index) ;
   template = template.replace('{{title}}', obj.title) ;
   template = template.replace('{{points}}', obj.points);
