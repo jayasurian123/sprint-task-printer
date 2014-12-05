@@ -117,7 +117,7 @@ function loadFromPivotal (data) {
       obj.title = val.name;
       obj.points = val.estimate || '__';
       obj.category = val.story_type;
-      obj.desc = val.description: '';
+      obj.desc = val.description? val.description: '';
 
       index = storage.save(obj);
       addTaskCard(obj, index);
